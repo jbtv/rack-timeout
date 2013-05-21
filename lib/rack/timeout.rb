@@ -13,7 +13,7 @@ module Rack
     FRAMEWORK_ERROR_KEYS = %w(sinatra.error rack.exception) # No idea what actually sets rack.exception but a lot of other libraries seem to reference it.
     FINAL_STATES         = [:expired, :timed_out, :completed]
     ACCEPTABLE_STATES    = [:ready] + FINAL_STATES
-    MAX_REQUEST_AGE      = 30 # seconds
+    MAX_REQUEST_AGE      = 180 # seconds
 
     @timeout = 15
     class << self
